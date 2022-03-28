@@ -9,6 +9,7 @@
   --very-dark-blue: hsl(235, 16%, 14%);
   --blackish-blue: hsl(234, 17%, 12%);
   --black: hsl(0, 0%, 0%);
+  --black-transparent: hsla(0, 0%, 0%, 0.15);
 }
 
 /* Reset */
@@ -85,6 +86,20 @@ span {
   justify-content: center;
 }
 
+.time-wrapper:hover .bottom-half {
+  transform: rotateX(180deg) rotateY(10deg);
+  z-index: 2;
+}
+
+.top-half {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: var(--black-transparent);
+  top: 0;
+  border-radius: 4px 4px 0px 0px;
+}
+
 .rectangle {
   position: absolute;
   width: 100%;
@@ -92,6 +107,18 @@ span {
   top: 50%;
   background: var(--black);
   opacity: 0.25;
+  z-index: 10;
+}
+
+.bottom-half {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: var(--dark-desaturated-blue);
+  bottom: 0;
+  border-radius: 0px 0px 4px 4px;
+  transform-origin: top left;
+  transition: all 0.5s;
 }
 
 .oval {
@@ -115,13 +142,13 @@ span {
   /* right: -12.86%; */
   top: 42.25%;
   bottom: 49.3%;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .time {
   color: var(--soft-red);
   font-size: 3.6rem;
   letter-spacing: -1.08px;
+  z-index: 10;
 }
 
 .units {
