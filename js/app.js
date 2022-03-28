@@ -3,7 +3,8 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
-const initialTime = new Date(Date.now() + 14 * 1000 * 60 * 60 * 24);
+let initialTime = new Date(Date.now() + 15 * 1000 * 60 * 60 * 24);
+initialTime = initialTime.setHours(0, 0, 0, 0);
 
 const updateCountdown = () => {
   const currentTime = new Date();
