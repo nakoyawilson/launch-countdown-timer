@@ -84,11 +84,12 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 500px;
   overflow: hidden;
 }
 
 .time-wrapper:hover .bottom-half {
-  transform: rotateX(180deg) rotateY(10deg);
+  transform: rotateX(180deg);
   z-index: 2;
 }
 
@@ -118,8 +119,9 @@ span {
   background: var(--dark-desaturated-blue);
   bottom: 0;
   border-radius: 0px 0px 4px 4px;
-  transform-origin: top left;
+  transform-origin: center top;
   transition: all 0.5s;
+  transform-style: preserve-3d;
 }
 
 .oval {
