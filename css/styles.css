@@ -84,6 +84,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .time-wrapper:hover .bottom-half {
@@ -122,26 +123,22 @@ span {
 }
 
 .oval {
-  color: var(--blackish-blue);
+  background-color: var(--blackish-blue);
   width: 0.6rem;
   height: 0.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 1000;
 }
 
 .left-oval {
-  position: absolute;
-  left: -4.29%;
-  right: 95.71%;
-  top: 42.25%;
-  bottom: 49.3%;
-  z-index: 10;
+  left: -0.3rem;
 }
 
 .right-oval {
-  position: absolute;
-  left: 104.29%;
-  /* right: -12.86%; */
-  top: 42.25%;
-  bottom: 49.3%;
+  right: -0.3rem;
 }
 
 .time {
@@ -206,6 +203,19 @@ span {
   .time-wrapper {
     box-shadow: 0 10px 0 var(--blackish-blue);
     height: 14rem;
+  }
+
+  .oval {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .left-oval {
+    left: -0.6rem;
+  }
+
+  .right-oval {
+    right: -0.6rem;
   }
 
   .time {
